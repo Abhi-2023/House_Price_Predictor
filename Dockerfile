@@ -1,5 +1,5 @@
 # 1️⃣ Base image (Linux + Python)
-FROM python:3.13-slim
+FROM python:3.10-slim
 
 # 2️⃣ Set environment variables
 ENV PYTHONUNBUFFERED=1 \
@@ -28,7 +28,7 @@ RUN pip install --upgrade pip && \
 COPY . .
 
 # 8️⃣ Expose port
-EXPOSE ${PORT:-5000}
+EXPOSE ${PORT:-8000}
 
 # 9️⃣ Start the app
-CMD ["gunicorn", "app:app", "--bind", "0.0.0.0:${PORT:-5000}"]
+CMD ["gunicorn", "app:app", "--bind", "0.0.0.0:${PORT:-8000}"]
