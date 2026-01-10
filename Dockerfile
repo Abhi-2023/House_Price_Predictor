@@ -28,7 +28,7 @@ RUN pip install --upgrade pip && \
 COPY . .
 
 # 8️⃣ Expose port
-EXPOSE 5000
+EXPOSE ${PORT:-5000}
 
 # 9️⃣ Start the app
-CMD ["gunicorn", "--bind", "0.0.0.0:5000", "app:app"]
+CMD ["gunicorn", "app:app", "--bind", "0.0.0.0:${PORT:-5000}"]
