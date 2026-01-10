@@ -20,7 +20,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-EXPOSE 8000
+EXPOSE 5000
 
-# Fixed CMD - binds to all interfaces on port 8000
-CMD ["gunicorn", "--bind", "0.0.0.0:8000", "app:app"]
+# Fixed CMD - binds to all interfaces on port 5000
+CMD ["gunicorn", "--bind", "0.0.0.0:5000", "app:app"]
