@@ -24,7 +24,7 @@ jobs:
       # 3️⃣ Build Docker image
       - name: Build Docker image
         run: |
-          docker build -t house-price-predictor:ci.
+          docker build -t house-price-predictor:ci .
 
       # 4️⃣ Run container and test app
       - name: Run container and test
