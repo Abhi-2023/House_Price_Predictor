@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: house-price-predictor
+    runtime: docker
+    plan: free  # Change to 'starter' or 'standard' for production
+    region: oregon  # Choose your preferred region
+    buildCommand: ""  # Using Dockerfile, so no build command needed
+    startCommand: ""  # Using Dockerfile CMD
+    envVars:
+      - key: PYTHONUNBUFFERED
+        value: 1
+      # Note: Render automatically sets PORT environment variable
+    healthCheckPath: /
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
