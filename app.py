@@ -29,7 +29,8 @@ def predict_price():
                 )
 
             data.append(float(value))
-            data = np.array(data, dtype=float).reshape(1,-1)
+        
+        data = np.array(data, dtype=float).reshape(1,-1)
         # Load the scaler zip
         scaler = pickle.load(open('scaler.pkl', 'rb'))
         # Transform the data
