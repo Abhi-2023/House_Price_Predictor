@@ -4,8 +4,7 @@ ML tool to predict the house price as per stated given data.
 
 # Software And Tools Required
 1. [Github Account](https://github.com)
-2. [Heroku Account](https://heroku.com)
-3. [VS Code Editor](https://code.visualstudio.com)
+2. [VS Code Editor](https://code.visualstudio.com)
 
 
 # Create new environment
